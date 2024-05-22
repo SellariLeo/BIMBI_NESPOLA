@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title >Bimbi Nespola</title>
+	<link rel="stylesheet" href="Stili/Nespola_stile.css">
+	 <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .chat-container {
+            max-width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .chat-messages {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+        .chat-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        .chat-input:focus {
+            background-color: #f0f0f0;
+        }
+        .chat-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .chat-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1> BIMBI NESPOLA </h1>
+	<p> UNA FAMIGLIA DI MATTI </p>
+	<hr/>
+	<h2>CHAT</h2>
+	<div class="chat-container">
+        <div class="chat-messages" id="chat-messages"></div>
+        <input type="text" class="chat-input" id="user-input" placeholder="Scrivi qualcosa...">
+        <button class="chat-button" onclick="sendMessage()">Invia</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById('user-input').value;
+            displayMessage('Tu', userInput);
+
+            // Simulazione di risposta del bot (potrebbe essere sostituita con l'AI di chat come GPT)
+            var botResponse = generateBotResponse(userInput);
+            displayMessage('Bot', botResponse);
+
+            // Pulisce l'input dopo l'invio del messaggio
+            document.getElementById('user-input').value = '';
+        }
+
+        function generateBotResponse(userInput) {
+            // Algoritmo semplice per generare risposte casuali del bot
+            var responses = [
+                "Haha, che domanda stupida!",
+                "Non lo so, chiedi a qualcun altro!",
+                "Ahah, che argomento interessante!",
+                "Non ho idea di cosa stai parlando!",
+                "Scommetto che potrebbe essere una buona idea!",
+                "Beh, io non direi proprio così!",
+                "Forse dovremmo chiederlo a GPT!",
+            ];
+            return responses[Math.floor(Math.random() * responses.length)];
+        }
+
+        function displayMessage(sender, message) {
+            var chatMessages = document.getElementById('chat-messages');
+            var messageElement = document.createElement('div');
+            messageElement.textContent = sender + ': ' + message;
+            chatMessages.appendChild(messageElement);
+
+            // Scrolla automaticamente fino all'ultimo messaggio
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+	<br/><br/><br/><br/><br/><br/><br/>
+		<hr/>
+		<div class="NEXT">
+		<a href="BIMBI NESPOLA.html"> <img src="foto/home.png" text-align:centre;> </a>
+		</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'DrunkAndProud';
+    src: url('DrunkAndProud.otf') format('truetype');
+}
+
+
+body {
+    background-color: #007fff;
+}
+
+
+h1{
+	margin-top: 10px;
+    font-family: 'DrunkAndProud', sans-serif;
+	font-size:100px;
+	margin-bottom: 5px;
+	
+}
+
+
+p{
+	font-size:25px;
+	margin-left: 50px;
+	margin-right: 50px;
+	justify-content: auto;
+}
+
+
+
+        .foto {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+        .foto img{
+            width: 50%; 
+            height: auto;
+            object-fit: cover; 
+			margin-left: 0px;
+        }
+        .foto p,h1,a{
+            margin-left: 50px;
+        }
+		.home img{
+            width: 2%; 
+            height: auto;
+            object-fit: cover; 
+			margin-left: 20px;
+        }
